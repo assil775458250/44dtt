@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="counter">عدد الزيارات: جاري التحميل...</div>
+
+<script>
+  fetch('https://api.countapi.xyz/hit/friend-student/site-visit')
+.then(response => response.json())
+.then(data => {
+      document.getElementById('counter').textContent = 'عدد الزيارات: ' + data.value;
+})
+.catch(error => {
+      document.getElementById('counter').textContent = 'حدث خطأ في تحميل العداد';
+      console.error('CountAPI Error:', error);
+});
+</script>
+
+
+
+
+</body>
+</html>

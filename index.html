@@ -7,26 +7,8 @@
 </head>
 <body>
 
-    
-<div id="counter">جاري تحميل عدد الزيارات...</div>
-
-
-<script>
-  
-  fetch('https://api.countapi.xyz/update/friend-student/site-visit/?amount=1')
-.then(response => response.json())
-.then(data => {
-      document.getElementById('counter').textContent = 'عدد الزيارات: ' + data.value;
-})
-.catch(error => {
-      document.getElementById('counter').textContent = '⚠ تعذر تحميل العداد';
-      console.error('CountAPI error:', error);
-});
-
-</script>
-
-
-
-
+    <div>
+<script type="text/javascript" src="https://www.freecounterstat.com/count.php?ID=abc123xyz"></script>
+   </div>
 </body>
 </html>
